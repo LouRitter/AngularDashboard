@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'AngularDashboard';
+  data = [2, 1, 6, 4, 1, 5];
+
 }
