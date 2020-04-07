@@ -12,13 +12,19 @@ import { environment } from '../environments/environment';
 import { DragulaModule } from 'ng2-dragula';
 import { LineChartComponent } from './line-chart/line-chart.component';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { NumberCardComponent } from './number-card/number-card.component';
+import { NumberCardContainerComponent } from './number-card/number-card.container';
+import { PieChartComponent } from './pie-chart/pie-chart.component';
+import { PieChartContainerComponent } from './pie-chart/pie-chart.container';
 
 @NgModule({
   declarations: [AppComponent, HelloWorldComponent, HelloWorldContainerComponent,
-    HelloWorldTwoContainerComponent, LineChartComponent, LineChartContainerComponent],
+    HelloWorldTwoContainerComponent, LineChartComponent, LineChartContainerComponent,
+    NumberCardComponent, NumberCardContainerComponent, PieChartComponent, PieChartContainerComponent],
   imports: [BrowserModule, BrowserAnimationsModule, DashboardModule, DragulaModule.forRoot(), NgxChartsModule],
-  providers: [],
+providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [HelloWorldContainerComponent, HelloWorldTwoContainerComponent, LineChartContainerComponent],
+  entryComponents: [HelloWorldContainerComponent, HelloWorldTwoContainerComponent,
+    LineChartContainerComponent, NumberCardContainerComponent, PieChartContainerComponent],
 })
 export class AppModule { }

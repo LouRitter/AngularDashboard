@@ -17,17 +17,21 @@ export class DashboardService {
           component: DashboardCards.HELLO_WORLD,
           id: 'hello-world',
         },
+        {
+          component: DashboardCards.PIE_CHART,
+          id: 'pie-chart',
+        },
       ],
     },
     {
       items: [
         {
-          component: DashboardCards.HELLO_WORLD_TWO,
-          id: 'hello-world-2',
-        },
-        {
           component: DashboardCards.LINE_CHART,
           id: 'line-chart',
+        },
+        {
+          component: DashboardCards.NUMBER_CARDS,
+          id: 'number-cards',
         },
       ],
     },

@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class HelloService {
-  names = ['Landon', 'Tim'];
+  names = ['Welcome To Angular Dashboard'];
 
   constructor(){}
 }

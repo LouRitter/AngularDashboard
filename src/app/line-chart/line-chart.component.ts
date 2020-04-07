@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, ViewChild, AfterViewInit } from '@angular/core';
+import { multi } from '../services/data';
 @Component({
   selector: 'app-line-chart',
   templateUrl: './line-chart.component.html',
@@ -9,39 +10,29 @@ export class LineChartComponent implements OnInit, AfterViewInit {
   @Input() data;
   @ViewChild('chart1') chart;
 
-  single: any = [
-    {
-      name: 'Germany',
-      value: 8940000
-    },
-    {
-      name: 'USA',
-      value: 5000000
-    },
-    {
-      name: 'France',
-      value: 7200000
-    }
-  ];
   multi: any[];
-
   view: any[] = [500, 300];
 
   // options
-  showXAxis = true;
-  showYAxis = true;
-  gradient = false;
-  showLegend = true;
-  showXAxisLabel = true;
-  xAxisLabel = 'Country';
+  legend = true;
+  showLabels = true;
+  animations = true;
+  xAxis = true;
+  yAxis = true;
   showYAxisLabel = true;
+  showXAxisLabel = true;
+  xAxisLabel = 'Year';
   yAxisLabel = 'Population';
+  timeline = true;
 
   colorScheme = {
-    domain: ['#5AA454', '#A10A28', '#C7B42C', '#AAAAAA']
+    domain: ['#5AA454', '#E44D25', '#CFC0BB', '#7aa3e5', '#a8385d', '#aae3f5'],
+    
   };
 
   constructor() {
+    Object.assign(this, { multi });
+
    }
 
   ngOnInit(): void {
@@ -49,7 +40,6 @@ export class LineChartComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    console.log(this.chart);
 
   }
 
